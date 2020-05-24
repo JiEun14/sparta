@@ -45,9 +45,38 @@
         }
     </style>
     <script>
-        function hey() {
-            alert('주문완료');
+        function q1() {
+            let name = $('#input-q1').val();
+            let address = $('#input-q2').val();
+            let phone = $('#input-q3').val();
+            let count = $('#input-q4').val();
+
+
+
+
+            if (name == '') {
+                alert('이름을 입력해주세요');
+                $('#input-q1').focus()
+                return
+            } else if (address == '') {
+                alert('주소를 입력해주세요');
+                $('#input-q2').focus()
+                return
+            } else if (phone == "") {
+                alert('휴대폰번호를 입력해주세요');
+                $('#input-q3').focus()
+                return
+            } else if (count ==""){
+                alert('수량을 입력하세요');
+                $('#input-q4').focus()
+                return
+            }
         }
+
+
+
+
+
     </script>
 </head>
 
@@ -67,25 +96,29 @@
             <div class="input-group-prepend">
                 <span class="input-group-text" id="inputGroup-sizing-default">이름</span>
             </div>
-            <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+            <input id="input-q1" type="text" class="form-control" aria-label="Default"
+                aria-describedby="inputGroup-sizing-default">
+
         </div>
         <div class="input-group mb-3">
             <div class="input-group-prepend">
                 <span class="input-group-text" id="inputGroup-sizing-default">주소</span>
             </div>
-            <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+            <input id="input-q2" type="text" class="form-control" aria-label="Default"
+                aria-describedby="inputGroup-sizing-default">
         </div>
         <div class="input-group mb-3">
             <div class="input-group-prepend">
                 <span class="input-group-text" id="inputGroup-sizing-default">전화번호</span>
             </div>
-            <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+            <input id="input-q3" type="text" class="form-control" aria-label="Default"
+                aria-describedby="inputGroup-sizing-default">
         </div>
         <div class="input-group mb-3">
             <div class="input-group-prepend">
                 <label class="input-group-text" for="inputGroupSelect01">수량</label>
             </div>
-            <select class="custom-select" id="inputGroupSelect01">
+            <select class="custom-select" id="inputGroupSelect01" id="input-q4">
                 <option value="1">1</option>
                 <option value="2">2</option>
                 <option value="3">3</option>
@@ -93,7 +126,7 @@
                 <option value="5">5</option>
             </select>
         </div>
-        <button onclick="hey()" type="button" class="btn btn-primary">주문하기</button>
+        <button onclick="q1()" type="button" class="btn btn-primary">주문하기</button>
     </div>
 
     <link href="https://fonts.googleapis.com/css?family=Stylish&display=swap" rel="stylesheet">
